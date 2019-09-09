@@ -1,0 +1,8 @@
+server:
+  port: 9090
+
+api:
+  product:
+    host: localhost
+    port: 8080
+    name: /list
