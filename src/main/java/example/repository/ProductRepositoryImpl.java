@@ -12,6 +12,16 @@ public class ProductRepositoryImpl implements ProductRepository {
 
     @Override
     public List<Products> getAll() {
+
+        // call api trả ra object response
+
+        // factory thành domain và gửi về service
+
+
+        // trong package repository có chứa 2 loai object để gọi resttemplate
+        // object response của api
+        // object request của api
+
         return null;
     }
 }
