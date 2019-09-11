@@ -3,6 +3,6 @@ server:
 
 api:
   product:
-    host: localhost
+    host: http://localhost
     port: 8080
     name: /list

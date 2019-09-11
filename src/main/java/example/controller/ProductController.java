@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.List;
+
 @Controller
 public class ProductController {
 
@@ -25,8 +27,10 @@ public class ProductController {
         // factory ra object show ra màn hình
         // hoặc có thể push domain ra màn hình luôn nếu không cần thiết factory
 
+        List<Products> products = service.getAll();
+        model.addAttribute("products", products);
 
-        //return "products";
-        throw new Exception("FD");
+        return "products";
+
     }
 }

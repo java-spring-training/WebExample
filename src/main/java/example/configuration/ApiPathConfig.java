@@ -3,6 +3,11 @@ package example.configuration;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Class này để đọc thông tin của các API cần gọi
+ * Các thông tin này được set ở applicaiton.yml
+ */
+
 @Configuration
 @ConfigurationProperties("api.product")
 public class ApiPathConfig {

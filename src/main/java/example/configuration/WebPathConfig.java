@@ -1,5 +1,8 @@
 package example.configuration;
 
+/**
+ * class này để chứa các entry path của web
+ */
 public class WebPathConfig {
 
     private WebPathConfig() {}
