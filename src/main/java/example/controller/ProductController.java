@@ -26,6 +26,7 @@ public class ProductController {
         // hoặc có thể push domain ra màn hình luôn nếu không cần thiết factory
 
 
-        return "products";
+        //return "products";
+        throw new Exception("FD");
     }
 }
