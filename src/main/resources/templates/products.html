@@ -6,9 +6,42 @@
 </head>
 <body>
 <h1>PRODUCTS</h1>
-<br>
+    <br>
 
-<p th:text="'Product size = ' + ${products.size()}" />
+    <p th:text="'Product size = ' + ${products.size()}" />
+
+    <br>
+
+    <table border="1" >
+        <thead>
+        <tr>
+            <th>No</th>
+            <th>Product Code</th>
+            <th>Product Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product, state : ${products}">
+
+            <!--show index-->
+            <td><span th:text="${state.index}" /></td>
+
+            <!--if productCode có chứa "S12" thì in đậm và tô đỏ-->
+            <td th:if="${#strings.contains(product.productCode.value, 'S12')}">
+                <span style="font-weight: bold; color:red" th:text="${product.productCode.value}" />
+            </td>
+
+            <!--ngược lại (else) thì hiển thì bình thường ko CSS-->
+            <td th:unless="${#strings.contains(product.productCode.value, 'S12')}">
+                <span th:text="${product.productCode.value}" />
+            </td>
+
+            <!---->
+            <td><span th:text="${product.productName}" /></td>
+        </tr>
+        </tbody>
+    </table>
+
 
 
 

@@ -5,17 +5,17 @@ import org.springframework.util.StringUtils;
 
 public class ProductCode {
 
-    String productCode;
+    String value;
 
-    public ProductCode(String productCode) {
+    public ProductCode(String value) {
 
         // business he thong yêu cầu Check productCode Not Null
-        Preconditions.checkArgument(StringUtils.hasText(productCode), "productCode must be not null");
+        Preconditions.checkArgument(StringUtils.hasText(value), "productCode must be not null");
 
-        this.productCode = productCode;
+        this.value = value;
     }
 
-    public String getProductCode() {
-        return productCode;
+    public String getValue() {
+        return value;
     }
 }

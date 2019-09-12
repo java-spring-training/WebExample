@@ -24,8 +24,8 @@ public class ProductController {
     public String listAllProduct(Model model) throws Exception {
 
         // gọi service nhận về domain
-        // factory ra object show ra màn hình
-        // hoặc có thể push domain ra màn hình luôn nếu không cần thiết factory
+        // factory từ domain object ra object để add attribute vào model và show lên màn hình
+        // hoặc có thể add domain object vào model để show ra màn hình luôn nếu cảm thấy không cần thiết factory
 
         List<Products> products = service.getAll();
         model.addAttribute("products", products);

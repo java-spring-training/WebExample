@@ -10,6 +10,10 @@ import java.util.stream.Collectors;
 @Component
 public class ProductFactory {
 
+    /**
+     *
+     * Factory ra domain object
+     */
     public List<Products> toListProduct (List<ProductResult> productResultList) {
 
         return productResultList.stream().map(this::toProduct).collect(Collectors.toList());

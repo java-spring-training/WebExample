@@ -8,4 +8,6 @@ import java.util.List;
 public interface ProductRepository {
 
     List<Products> getAll() throws ProductApiErrorException;
+
+    void addProduct() throws ProductApiErrorException;
 }

@@ -30,6 +30,9 @@ public class WebExceptionHandler {
      * dù cho api có định nghĩa nhiều lỗi: 400 403 404 500 ...
      * thì trên màn hình cũng chỉ cần define 1 ProductApiErrorException để mô tả việc gọi api bị fail
      *
+     * khi 1 ứng dụng web gọi đến nhiều api thì quy định mỗi 1 api sẽ tạo 1 exception tương ứng
+     * đây là quy định trong workshop này thôi
+     * trên thực tế muốn tạo bao nhiêu exception thì tùy thuộc vào cách tổ chức source của từng team
      *
      */
     @ExceptionHandler(ProductApiErrorException.class)
