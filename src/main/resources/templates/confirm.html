@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+<body>
+
+    <h1>CONFIRM</h1><br><br>
+
+    <form th:action="@{/back}" th:object="${productForm}" method="post">
+        Product Code
+        <input type="text" name="txtCode" th:field="${productForm.txtCode}"/>
+        <br>
+        Product Name
+        <input type="text" name="txtName" th:field="${productForm.txtName}"/>
+        <br>
+        <input type="submit" value="Back" />
+    </form>
+
+</body>
+</html>

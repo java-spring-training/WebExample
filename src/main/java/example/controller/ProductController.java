@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -31,6 +32,26 @@ public class ProductController {
         model.addAttribute("products", products);
 
         return "products";
+    }
 
+    @GetMapping(WebPathConfig.ADD_PRODUCT_PAGE)
+    public String addProduct(ProductForm productForm) {
+
+        // hiển thị màn hình add
+        return "add";
+    }
+
+    @PostMapping(WebPathConfig.CONFIRM_PRODUCT_PAGE)
+    public String confirmProduct(ProductForm productForm) {
+
+        // hiển thị màn hình confirm
+        return "confirm";
+    }
+
+    @PostMapping(WebPathConfig.BACK)
+    public String backProduct(ProductForm productForm) {
+
+        // back về màn hình add
+        return "add";
     }
 }
